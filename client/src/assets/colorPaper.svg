@@ -1,0 +1,16 @@
+ {/* inline SVG logo: document + AI chip */}
+                        <svg className="w-10 h-10" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ResumeVerse AI logo">
+                            <defs>
+                                <linearGradient id="logoGrad" x1="0" x2="1" y1="0" y2="1">
+                                    <stop offset="0" stopColor="#7C3AED" />
+                                    <stop offset="1" stopColor="#06B6D4" />
+                                </linearGradient>
+                            </defs>
+                            <rect x="6" y="6" width="40" height="52" rx="3" fill="#0b0214" stroke="url(#logoGrad)" strokeWidth="2" />
+                            <path d="M18 14h20v6H18zM18 26h20v6H18zM18 38h12v6H18z" fill="#1f1530" />
+                            <g transform="translate(46,10)">
+                                <rect x="0" y="0" width="12" height="12" rx="2" fill="#07051a" stroke="url(#logoGrad)" strokeWidth="1.5"/>
+                                <circle cx="6" cy="6" r="2.5" fill="#fff" opacity="0.92"/>
+                                <path d="M6 3v-1M6 9v1M3 6h-1M9 6h1" stroke="#fff" strokeWidth="0.8" strokeLinecap="round"/>
+                            </g>
+                        </svg>

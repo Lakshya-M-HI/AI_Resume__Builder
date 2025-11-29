@@ -1,0 +1,55 @@
+<svg
+  width="48"
+  height="48"
+  viewBox="0 0 200 200"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <!-- Glowing gradient for futuristic effect -->
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="50%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+
+    <!-- Soft drop shadow -->
+    <filter id="shadow" x="-20%" y="-20%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#5B21B6" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Outer futuristic ring -->
+  <circle
+    cx="100"
+    cy="100"
+    r="82"
+    stroke="url(#grad1)"
+    stroke-width="10"
+    fill="none"
+    filter="url(#shadow)"
+  />
+
+  <!-- Digital Resume Symbol -->
+  <rect
+    x="63"
+    y="48"
+    width="74"
+    height="104"
+    rx="12"
+    stroke="white"
+    stroke-width="6"
+    fill="rgba(255,255,255,0.03)"
+  />
+
+  <!-- Resume lines -->
+  <line x1="78" y1="78" x2="122" y2="78" stroke="url(#grad1)" stroke-width="6" stroke-linecap="round" />
+  <line x1="78" y1="102" x2="122" y2="102" stroke="white" stroke-width="5" stroke-linecap="round" opacity="0.7"/>
+  <line x1="78" y1="126" x2="122" y2="126" stroke="white" stroke-width="5" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- AI spark node -->
+  <circle cx="100" cy="160" r="10" fill="url(#grad1)" filter="url(#shadow)" />
+
+  <!-- Top AI dot -->
+  <circle cx="100" cy="40" r="8" fill="url(#grad1)" />
+</svg>

@@ -1,0 +1,106 @@
+<svg width="320" height="80" viewBox="0 0 320 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ResumeVerse AI logo">
+  <defs>
+    <!-- rotating neon gradient for the ring -->
+    <linearGradient id="ringGradAnim" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse" >
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="25%" stop-color="#3B82F6"/>
+      <stop offset="50%" stop-color="#06B6D4"/>
+      <stop offset="75%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+      <!-- rotate gradient continuously -->
+      <animateTransform attributeName="gradientTransform" type="rotate"
+                        from="0 50 50" to="360 50 50" dur="6s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <!-- subtle gradient for text -->
+    <linearGradient id="titleGradAnim" x1="0%" y1="0%" x2="100%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="50%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+
+    <!-- core jewel gradient -->
+    <linearGradient id="coreGradAnim" x1="0%" y1="0%" x2="100%">
+      <stop offset="0%" stop-color="#7b1fa2"/>
+      <stop offset="60%" stop-color="#d63384"/>
+      <stop offset="100%" stop-color="#ff77b6"/>
+      <!-- tiny oscillation on core gradient -->
+      <animate attributeName="x1" values="0%;10%;0%" dur="4s" repeatCount="indefinite" />
+    </linearGradient>
+
+    <!-- glow filter for ring -->
+    <filter id="ringGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- soft drop for core -->
+    <filter id="coreDrop" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#d63384" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- group positioned horizontally (left icon + right text) -->
+  <g transform="translate(8,8)">
+
+    <!-- ICON (circle + ring + core + R) -->
+    <g transform="translate(0,0)">
+
+      <!-- outer animated ring (stroke uses rotating gradient) -->
+      <circle cx="36" cy="36" r="30"
+              fill="none"
+              stroke="url(#ringGradAnim)"
+              stroke-width="6"
+              stroke-linecap="round"
+              filter="url(#ringGlow)">
+        <!-- subtle breathing (opacity) on the ring -->
+        <animate attributeName="opacity" values="0.95;0.6;0.95" dur="5s" repeatCount="indefinite"/>
+        <!-- slight stroke-width pulse -->
+        <animate attributeName="stroke-width" values="5;7;5" dur="5s" repeatCount="indefinite"/>
+      </circle>
+
+      <!-- background circle -->
+      <circle cx="36" cy="36" r="22" fill="url(#titleGradAnim)" opacity="0.12" />
+
+      <!-- inner jewel core (pulsing) -->
+      <circle cx="36" cy="36" r="14" fill="url(#coreGradAnim)" filter="url(#coreDrop)">
+        <!-- core pulse scale -->
+        <animateTransform attributeName="transform" type="scale"
+                          values="1;1.06;1" keyTimes="0;0.5;1" dur="2.6s" repeatCount="indefinite"
+                          additive="sum" />
+        <!-- core subtle glow opacity -->
+        <animate attributeName="opacity" values="1;0.85;1" dur="2.6s" repeatCount="indefinite"/>
+      </circle>
+
+      <!-- R letter centered in core -->
+      <text x="36" y="40" text-anchor="middle" font-family="Pacifico, 'Brush Script MT', cursive"
+            font-size="20" fill="white" stroke="rgba(255,255,255,0.12)" stroke-width="1">
+        R
+      </text>
+
+      <!-- AI badge top-right -->
+      <text x="58" y="18" text-anchor="middle" font-family="Inter, Arial, sans-serif"
+            font-size="12" font-weight="800" fill="url(#coreGradAnim)" stroke="rgba(255,255,255,0.06)" stroke-width="0.3">
+        AI
+      </text>
+    </g>
+
+    <!-- TEXT: ResumeVerse (gradient fill) -->
+    <g transform="translate(90,44)">
+      <text x="0" y="0" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="28"
+            fill="url(#titleGradAnim)" style="letter-spacing:0.4px">
+        ResumeVerse
+        <!-- subtle shimmer across the text -->
+        <animate attributeName="opacity" values="1;0.95;1" dur="6s" repeatCount="indefinite"/>
+      </text>
+
+      <!-- small 'AI' tag on right -->
+      <text x="170" y="0" font-family="Inter" font-weight="900" font-size="18" fill="url(#coreGradAnim)">
+        AI
+      </text>
+    </g>
+  </g>
+</svg>
