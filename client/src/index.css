@@ -40,3 +40,75 @@
 .btn {
   @apply flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-600 hover:bg-purple-700 transition;
 }
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.35s ease-out;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.25s ease-out;
+}
+
+@keyframes dropdown {
+  0% { opacity: 0; transform: scale(0.95) translateY(-4px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.animate-dropdown {
+  animation: dropdown 0.25s ease-out;
+}
+@keyframes fadeSlide {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeSlide {
+  animation: fadeSlide .35s ease-out;
+}
+
+
+
+@keyframes scaleIn {
+  0% { opacity: 0; transform: scale(.96) translateY(6px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+.animate-scaleIn {
+  animation: scaleIn .35s ease-out;
+}
+
+
+
+.glass-btn {
+  @apply p-2 rounded-lg bg-white/10 text-white border border-white/20
+         backdrop-blur-xl shadow-inner hover:bg-white/20 
+         transition active:scale-95 flex items-center justify-center;
+}
+
+.active-btn {
+  @apply bg-purple-600/60 border-purple-400 shadow-lg;
+}
+
+@keyframes scaleIn {
+  0% { opacity: 0; transform: scale(.96) translateY(6px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.animate-scaleIn {
+  animation: scaleIn .35s ease-out;
+}
