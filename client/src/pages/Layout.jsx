@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 
 const Layout = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#0A0215] via-black to-[#0A0215] text-white overflow-x-hidden">
+    <div className="min-h-screen bg-linear-to-b from-[#0A0215] via-black to-[#0A0215] text-white overflow-x-hidden">
 
       {/* Navbar */}
       <Navbar />

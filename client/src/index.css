@@ -112,3 +112,12 @@
 .animate-scaleIn {
   animation: scaleIn .35s ease-out;
 }
+
+.pi-card {
+    animation: fadeSlide .35s ease-out;
+}
+
+@keyframes fadeSlide {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}

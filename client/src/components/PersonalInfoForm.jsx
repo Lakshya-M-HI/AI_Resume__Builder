@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useRef } from "react"
 import {
     User,
     Mail,
@@ -37,16 +37,24 @@ const PersonalInfoForm = ({ data, onChange, removeBackground, setRemoveBackgroun
     const [previewUrl, setPreviewUrl] = useState(null)
 
     // create preview URL for file objects and cleanup
+    const prevImage = useRef(null);
     useEffect(() => {
-        if (data?.image && typeof data.image !== "string") {
-            const url = URL.createObjectURL(data.image)
-            setPreviewUrl(url)
-            return () => URL.revokeObjectURL(url)
+        if (!data?.image) return setPreviewUrl(null);
+
+        if (typeof data.image === "string") {
+            setPreviewUrl(data.image);
         }
-        // if image is string (already a URL/base64), show it
-        setPreviewUrl(typeof data?.image === "string" ? data.image : null)
-        return undefined
-    }, [data?.image])
+    }, [data?.image]);
+
+    useEffect(() => {
+        if (!data?.image || typeof data.image === "string") return;
+
+        const url = URL.createObjectURL(data.image);
+        setPreviewUrl(url);
+
+        return () => URL.revokeObjectURL(url);
+    }, [data?.image]);
+
 
     const handleChange = (field, value) => {
         onChange({ ...data, [field]: value })
@@ -141,6 +149,7 @@ const PersonalInfoForm = ({ data, onChange, removeBackground, setRemoveBackgroun
                     --border: rgba(255,255,255,0.06);
                 }
                 .pi-card {
+                padding: 24px;
                     background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
                     border: 1px solid var(--border);
                     padding: 20px;
@@ -198,6 +207,9 @@ const PersonalInfoForm = ({ data, onChange, removeBackground, setRemoveBackgroun
                 @media (max-width:720px) {
                     .fields-grid { grid-template-columns: 1fr; }
                 }
+                    .field-input::placeholder {
+    color: rgba(255,255,255,0.4);
+}
             `}</style>
         </section>
     )
