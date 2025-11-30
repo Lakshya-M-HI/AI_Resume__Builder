@@ -11,7 +11,7 @@ const Navbar = () => {
 
     return (
         <header className="sticky top-0 z-40">
-            <nav className="
+            <nav className=" 
         backdrop-blur-xl bg-white/10 border-b border-white/20
         shadow-[0_8px_20px_rgba(0,0,0,0.25)]
       ">
@@ -36,7 +36,7 @@ const Navbar = () => {
                             onClick={logoutUser}
                             className="
                 px-5 py-2 rounded-full text-sm font-semibold
-                bg-gradient-to-r from-purple-600 to-indigo-600 
+                bg-linear-to-r from-purple-600 to-indigo-600 
                 hover:from-purple-700 hover:to-indigo-700 
                 transition-all active:scale-95
                 text-white shadow-lg flex items-center gap-2

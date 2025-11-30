@@ -9,7 +9,7 @@ const CreativeGradientTemplate = ({ data = {}, accentColor = "#A855F7", darkMode
     <div className={`${root} w-[794px] min-h-[1123px] p-8 font-inter`}>
       <div className="flex gap-6">
         {/* Left gradient bar */}
-        <div style={{ width: 140 }} className="flex-shrink-0">
+        <div style={{ width: 140 }} className="shrink-0">
           <div
             className="h-full rounded-lg p-4 flex flex-col justify-start"
             style={{ background: `linear-gradient(180deg, ${accentColor}, #6d28d9)` }}

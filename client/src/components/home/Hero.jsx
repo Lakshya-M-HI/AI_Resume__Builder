@@ -350,7 +350,7 @@ const Hero = () => {
           <div className="hidden md:flex items-center gap-4">
             <button className="bg-transparent text-gray-200 hover:text-white">Templates</button>
             <button className="bg-transparent text-gray-200 hover:text-white">Features</button>
-            <button className="ai-cta-btn text-white px-4 py-2 rounded-full">Get Started</button>
+            <Link to="/app"><button className="ai-cta-btn text-white px-4 py-2 rounded-full">Get Started</button></Link>
           </div>
 
           <div className="md:hidden">
@@ -363,7 +363,7 @@ const Hero = () => {
           <div className="flex -space-x-3 pr-3">
             {/* Avatar svgs (replaced images) */}
             <svg className="w-10 h-10 object-cover rounded-full border-2 border-white transform hover:-translate-y-0.5 transition z-1" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-              <defs><linearGradient id="a1" x1="0" x2="1"><stop offset="0" stopColor="#7C3AED"/><stop offset="1" stopColor="#06B6D4"/></linearGradient></defs>
+              <defs><linearGradient id="a1" x1="0" x2="1"><stop offset="0" stopColor="#7C3AED" /><stop offset="1" stopColor="#06B6D4" /></linearGradient></defs>
               <circle cx="16" cy="16" r="15" fill="url(#a1)" />
               <path d="M10 21c1.8-2 4.4-3 6-3s4.2 1 6 3" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" fill="none" />
               <circle cx="12.5" cy="13" r="1.6" fill="#fff" />
@@ -371,7 +371,7 @@ const Hero = () => {
             </svg>
 
             <svg className="w-10 h-10 object-cover rounded-full border-2 border-white transform hover:-translate-y-0.5 transition z-2" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-              <defs><linearGradient id="a2" x1="0" x2="1"><stop offset="0" stopColor="#10B981"/><stop offset="1" stopColor="#4F46E5"/></linearGradient></defs>
+              <defs><linearGradient id="a2" x1="0" x2="1"><stop offset="0" stopColor="#10B981" /><stop offset="1" stopColor="#4F46E5" /></linearGradient></defs>
               <rect x="1" y="1" width="30" height="30" rx="6" fill="url(#a2)" />
               <g transform="translate(6 6)" fill="#fff" opacity="0.95">
                 <rect x="0" y="0" width="4" height="4" rx="1" />
@@ -381,7 +381,7 @@ const Hero = () => {
             </svg>
 
             <svg className="w-10 h-10 object-cover rounded-full border-2 border-white transform hover:-translate-y-0.5 transition z-3" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-              <defs><linearGradient id="a3" x1="0" x2="1"><stop offset="0" stopColor="#F59E0B"/><stop offset="1" stopColor="#EF4444"/></linearGradient></defs>
+              <defs><linearGradient id="a3" x1="0" x2="1"><stop offset="0" stopColor="#F59E0B" /><stop offset="1" stopColor="#EF4444" /></linearGradient></defs>
               <circle cx="16" cy="16" r="15" fill="url(#a3)" />
               <g fill="#fff" opacity="0.95">
                 <rect x="8" y="8" width="16" height="4" rx="1" />
@@ -424,12 +424,12 @@ const Hero = () => {
                 {/* AI spark */}
                 <div className="ai-spark" style={{ marginRight: 10 }} aria-hidden>
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-                    <defs><linearGradient id="coreMobileGradInner" x1="0%" y1="0%" x2="100%"><stop offset="0%" stopColor="#7b1fa2"/><stop offset="60%" stopColor="#d63384"/><stop offset="100%" stopColor="#ff77b6"/></linearGradient></defs>
-                    <circle cx="12" cy="12" r="5" fill="url(#coreMobileGradInner)"/>
-                    <path d="M12 2 L12 6" stroke="white" strokeWidth="1.2" strokeLinecap="round"/>
-                    <path d="M12 18 L12 22" stroke="white" strokeWidth="1.2" strokeLinecap="round"/>
-                    <path d="M2 12 L6 12" stroke="white" strokeWidth="1.2" strokeLinecap="round"/>
-                    <path d="M18 12 L22 12" stroke="white" strokeWidth="1.2" strokeLinecap="round"/>
+                    <defs><linearGradient id="coreMobileGradInner" x1="0%" y1="0%" x2="100%"><stop offset="0%" stopColor="#7b1fa2" /><stop offset="60%" stopColor="#d63384" /><stop offset="100%" stopColor="#ff77b6" /></linearGradient></defs>
+                    <circle cx="12" cy="12" r="5" fill="url(#coreMobileGradInner)" />
+                    <path d="M12 2 L12 6" stroke="white" strokeWidth="1.2" strokeLinecap="round" />
+                    <path d="M12 18 L12 22" stroke="white" strokeWidth="1.2" strokeLinecap="round" />
+                    <path d="M2 12 L6 12" stroke="white" strokeWidth="1.2" strokeLinecap="round" />
+                    <path d="M18 12 L22 12" stroke="white" strokeWidth="1.2" strokeLinecap="round" />
                   </svg>
                 </div>
 
@@ -515,7 +515,7 @@ const Hero = () => {
             <div className="flex items-start justify-between">
               {/* ATS-Optimized Templates SVG */}
               <svg className="w-12 h-12" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-                <defs><linearGradient id="ats1" x1="0" x2="1"><stop offset="0" stopColor="#7C3AED"/><stop offset="1" stopColor="#4F46E5"/></linearGradient></defs>
+                <defs><linearGradient id="ats1" x1="0" x2="1"><stop offset="0" stopColor="#7C3AED" /><stop offset="1" stopColor="#4F46E5" /></linearGradient></defs>
                 <rect x="6" y="8" width="36" height="48" rx="3" fill="#0e0620" stroke="url(#ats1)" strokeWidth="2" />
                 <path d="M14 18h22M14 26h22M14 34h14" stroke="#cbd5ff" strokeWidth="2.2" strokeLinecap="round" />
                 <path d="M44 44l5 5 9-13" stroke="#34d399" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
@@ -529,7 +529,7 @@ const Hero = () => {
           <div className="bg-linear-to-b from-[#2A0150] to-[#090025] hover:-translate-y-1 transition duration-300 border border-violet-900 rounded-lg p-6 space-y-4">
             {/* AI Job-Description Tailoring SVG */}
             <svg className="w-12 h-12" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-              <defs><linearGradient id="tail1" x1="0" x2="1"><stop offset="0" stopColor="#06B6D4"/><stop offset="1" stopColor="#10B981"/></linearGradient></defs>
+              <defs><linearGradient id="tail1" x1="0" x2="1"><stop offset="0" stopColor="#06B6D4" /><stop offset="1" stopColor="#10B981" /></linearGradient></defs>
               <rect x="6" y="8" width="36" height="48" rx="3" fill="#071026" stroke="url(#tail1)" strokeWidth="2" />
               <circle cx="46" cy="20" r="9" fill="#0b1226" stroke="#7C3AED" strokeWidth="1.8" />
               <path d="M42 18c1 1 2 2.2 4 2" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" />
@@ -547,7 +547,7 @@ const Hero = () => {
           <div className="bg-linear-to-b from-[#2A0150] to-[#090025] hover:-translate-y-1 transition duration-300 border border-violet-900 rounded-lg p-6 space-y-4">
             {/* One-Click Export SVG */}
             <svg className="w-12 h-12" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-              <defs><linearGradient id="exp1" x1="0" x2="1"><stop offset="0" stopColor="#F59E0B"/><stop offset="1" stopColor="#EF4444"/></linearGradient></defs>
+              <defs><linearGradient id="exp1" x1="0" x2="1"><stop offset="0" stopColor="#F59E0B" /><stop offset="1" stopColor="#EF4444" /></linearGradient></defs>
               <rect x="6" y="8" width="36" height="48" rx="3" fill="#071026" stroke="url(#exp1)" strokeWidth="2" />
               <path d="M24 18v14" stroke="#fff" strokeWidth="2.4" strokeLinecap="round" />
               <path d="M20 26l8-8 8 8" stroke="#fff" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" fill="none" />
@@ -558,7 +558,7 @@ const Hero = () => {
             <p className="text-sm text-gray-200">Export to PDF, Word, or share a public resume link. Generate matching cover letters and LinkedIn summaries.</p>
           </div>
         </div>
-      <Feature />
+        <Feature />
       </section>
     </>
   );

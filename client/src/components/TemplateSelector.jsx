@@ -86,7 +86,7 @@ const TemplateSelector = ({ selectedTemplate, onChange }) => {
                   flex items-center gap-4 px-4 py-3 cursor-pointer transition 
                   border-b border-white/10 last:border-0
                   ${selected
-                                        ? "bg-gradient-to-r from-purple-600/40 to-indigo-600/40"
+                                        ? "bg-linear-to-r from-purple-600/40 to-indigo-600/40"
                                         : "hover:bg-white/10"
                                     }
                 `}
@@ -112,7 +112,7 @@ const TemplateSelector = ({ selectedTemplate, onChange }) => {
                         );
                     })}
                 </div>
-            )}
+            )} 
         </div>
     );
 };

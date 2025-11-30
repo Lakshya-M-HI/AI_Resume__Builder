@@ -6,6 +6,7 @@ import PersonalInfoForm from '../components/PersonalInfoForm'
 import ResumePreview from '../components/ResumePreview'
 import TemplateSelector from '../components/TemplateSelector'
 import html2pdf from "html2pdf.js";
+import { Download, Moon, Sun, Smartphone, Monitor, ZoomIn, ZoomOut } from "lucide-react";
 
 
 const sectionsList = [
@@ -67,8 +68,12 @@ const AI_ResumeBuilder = () => {
     if (!resumeId) return
     const found = dummyResumeData.find(r => r._id === resumeId)
     if (found) {
-      setResumeData(found)
-      document.title = found.title || 'Resume Builder'
+      // Defer the state update to avoid a synchronous setState inside the effect,
+      // which can cause cascading renders; also update document title alongside.
+      setTimeout(() => {
+        setResumeData(found)
+        document.title = found.title || 'Resume Builder'
+      }, 0)
     }
   }, [resumeId])
 
@@ -76,7 +81,7 @@ const AI_ResumeBuilder = () => {
   const goNext = () => setActiveSectionIndex(i => Math.min(i + 1, sectionsList.length - 1))
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0A0212] via-black to-[#0A0212] text-white px-6 py-8">
+    <div className="min-h-screen bg-linear-to-br from-[#0A0212] via-black to-[#0A0212] text-white px-6 py-8">
 
       {/* Back Button */}
       <Link
@@ -94,7 +99,7 @@ const AI_ResumeBuilder = () => {
         <aside className="w-72 bg-white/10 border border-white/20 backdrop-blur-xl rounded-2xl p-6 shadow-lg">
 
           {/* Resume Title */}
-          <h1 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <h1 className="text-xl font-bold bg-linear-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             {resumeData.title || "Untitled Resume"}
           </h1>
 
@@ -119,7 +124,7 @@ const AI_ResumeBuilder = () => {
                   className={`
                   w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition
                   ${active
-                      ? "bg-gradient-to-r from-purple-600/70 to-indigo-600/70 border border-white/20 shadow-lg"
+                      ? "bg-linear-to-r from-purple-600/70 to-indigo-600/70 border border-white/20 shadow-lg"
                       : " hover:bg-white/10"
                     }
                 `}
@@ -160,7 +165,7 @@ const AI_ResumeBuilder = () => {
           <section className="flex-1 bg-white/10 border border-white/20 backdrop-blur-xl rounded-2xl p-6 shadow-lg">
 
             <header className="flex justify-between items-center mb-6">
-              <h2 className="text-2xl font-semibold bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
+              <h2 className="text-2xl font-semibold bg-linear-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
                 {activeSection?.name}
               </h2>
 
